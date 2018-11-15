@@ -14,6 +14,9 @@ export class ShoppingListComponent implements OnInit {
     new Ingredient('more Apples', 5)
   ];
   
+  onIngredientAdded(ingredient : Ingredient){
+    this.ingredients.push(ingredient);
+  }
 
   constructor() { }
 
