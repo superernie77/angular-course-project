@@ -1,6 +1,10 @@
 import { Recipe } from "./recipe.model";
+import { EventEmitter } from "@angular/core";
 
 export class RecipeService {
+    
+    recipeSelected = new EventEmitter<Recipe>();
+    
     private recipes: Recipe[] = [
         new Recipe('Force Pizza','extra force added','https://media.giphy.com/media/9B5EkgWrF4Rri/giphy.gif'),
         new Recipe('Cowboy Pizza','with good milage on it','https://media.giphy.com/media/10kxE34bJPaUO4/giphy.gif')
