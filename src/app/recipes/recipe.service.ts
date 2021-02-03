@@ -6,7 +6,7 @@ import { ShoppingListService } from "../shopping-list/shopping-list.service";
 @Injectable()
 export class RecipeService {
 
-    private recipes: Recipe[] = [
+   /* private recipes: Recipe[] = [
         new Recipe(
             'Force Pizza',
             'extra force added',
@@ -22,9 +22,15 @@ export class RecipeService {
             'https://media.giphy.com/media/10kxE34bJPaUO4/giphy.gif',
             [new Ingredient('Tomatoes', 3),
             new Ingredient('Cattle', 2),])
-    ];
+    ];*/
+    private recipes: Recipe[] = [];
 
     constructor(private slService : ShoppingListService){}
+
+    setRecipes(recipes : Recipe[]){
+      this.recipes = recipes;
+      //this.recipesChanged.next(this.recipes.slice());
+    }
 
     getRecipes() {
         // copy of the array returned
